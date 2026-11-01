@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Executive Summary: Non-Blocking Memory and Isolation Invention</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --border: #d5dde8;
+    --text: #1b2433;
+    --muted: #5a6779;
+    --accent: #1c5fa8;
+    --warn: #b45309;
+    --danger: #b42318;
+    --ok: #1f7a3d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0e141d;
+      --surface: #151e2a;
+      --border: #2a3a50;
+      --text: #e4ebf4;
+      --muted: #9aa8bb;
+      --accent: #6aaef0;
+      --warn: #f5a524;
+      --danger: #ff7a6b;
+      --ok: #5fd08a;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0e141d;
+    --surface: #151e2a;
+    --border: #2a3a50;
+    --text: #e4ebf4;
+    --muted: #9aa8bb;
+    --accent: #6aaef0;
+    --warn: #f5a524;
+    --danger: #ff7a6b;
+    --ok: #5fd08a;
+  }
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  *, *::before, *::after { box-sizing: inherit; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 28px 18px 56px; }
+  header { border-bottom: 3px solid var(--accent); padding-bottom: 14px; margin-bottom: 22px; }
+  header h1 { margin: 0 0 6px; font-size: clamp(1.3rem, 3.4vw, 1.9rem); color: var(--accent); }
+  header p { margin: 0; color: var(--muted); }
+  .status {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--danger);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 26px;
+  }
+  .status strong { color: var(--danger); }
+  h2 { font-size: 1.2rem; margin: 30px 0 10px; color: var(--accent); }
+  h3 { font-size: 1.02rem; margin: 18px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .table-wrap { overflow-x: auto; margin-bottom: 16px; border: 1px solid var(--border); border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.93rem; background: var(--surface); }
+  th, td { text-align: left; padding: 9px 11px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--accent); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr:last-child td { border-bottom: none; }
+  .tag { display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; }
+  .tag.ok { color: var(--ok); }
+  .tag.warn { color: var(--warn); }
+  .tag.danger { color: var(--danger); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+  .card h3 { margin-top: 0; }
+  footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Executive Summary: Non-Blocking Memory and Isolation Invention</h1>
+  <p>Delper Aegis patent project &middot; Draft specification review</p>
+</header>
+
+<div class="status">
+  <p><strong>Status:</strong> Draft patent specification, not ready to file. No prior-art search, attorney review, or engineering validation has been completed. Patentability has not been determined.</p>
+</div>
+
+<h2>1. Purpose</h2>
+<p>The project seeks patent protection for a hardware architecture that combines two elements.</p>
+<ul>
+  <li>A physical isolation switch on an external network line, triggered by a traffic-anomaly detector, with an independent local path that keeps factory automation running.</li>
+  <li>A non-blocking memory hierarchy in which an encrypted input stream is staged in SRAM, committed to bulk storage over a one-way hardwired write path, and logged to a non-volatile ledger, with processor access on a physically separate bus.</li>
+</ul>
+<p>Supporting features (write-lock interlock, crypto co-processor with tamper detection, dual ring-bus track separation) appear as dependent claims.</p>
+
+<h2>2. Source Materials</h2>
+<div class="card">
+  <h3>Delper Revenue Processor Node / Aegis DRM Node (HTML)</h3>
+  <p>A blueprint and marketing-style document. It describes six revenue streams, 2,147 coastal hubs, 560,000 "dark factories," a $94.13 billion hardware cost table, toll rates, and bond retirement schedules. None of these figures is supported by engineering evidence in the files.</p>
+</div>
+<div class="card">
+  <h3>Delper Guard Threat Registry (HTML)</h3>
+  <p>A list of 52 threats across six domains. These are standard cybersecurity categories, so the list itself has no patent value.</p>
+</div>
+<div class="card">
+  <h3>Specification kit drafts (v1 through v4 and the pasted "finalized" text)</h3>
+  <p>Iterative drafts of the patent text and claims.</p>
+</div>
+<div class="card">
+  <h3>Drawings</h3>
+  <p>FIGS. 1, 4, and 5 have been reviewed as images. FIGS. 2, 3, and 6 through 9 have not been reviewed as images. FIG. 10 is recommended for deletion unless measured data exists.</p>
+</div>
+
+<h2>3. Claim Structure (Current Draft)</h2>
+<ul>
+  <li><strong>Claim 1 (memory system).</strong> Strongest independent claim. Requires an SRAM cache with an order queuing buffer, a one-way hardwired write path, a bulk storage layer, a hash-chained ledger on non-volatile memory, and a processor bus physically separated from the write path.</li>
+  <li><strong>Claim 2 (isolation system).</strong> Broadest and most exposed to prior art. Requires an inline physical switch, a threat detector, an isolation gate, and an independent local path.</li>
+  <li><strong>Claim 3 (method).</strong> Parallels claim 2 as a method, with a bounded propagation delay and local-only operation.</li>
+  <li><strong>Claims 4 to 6 (dependent).</strong> Write-lock interlock, crypto key vault with tamper detection, and dual ring-bus track separation.</li>
+</ul>
+
+<h2>4. Figure Status</h2>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>FIG.</th><th>Subject</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>System block diagram</td><td><span class="tag ok">Revised</span> Crypto placement and switch fixed. Check consistency with text.</td></tr>
+    <tr><td>2</td><td>Blast radius isolation circuit</td><td><span class="tag warn">Not reviewed</span> Text supports claim 2.</td></tr>
+    <tr><td>3</td><td>Write-lock interlock</td><td><span class="tag warn">Not reviewed</span> Text supports claim 4.</td></tr>
+    <tr><td>4</td><td>Dual ring-bus track layout</td><td><span class="tag warn">Needs work</span> Barrier and 440a/440b labels must be added to the drawing.</td></tr>
+    <tr><td>5</td><td>Memory hierarchy</td><td><span class="tag warn">Needs work</span> Duplicate numeral 540, input path, and missing 505/565 labels. Hash-chain structure not shown.</td></tr>
+    <tr><td>6</td><td>Crypto datapath</td><td><span class="tag warn">Not reviewed</span> Text supports claim 5.</td></tr>
+    <tr><td>7</td><td>Threat-response flowchart</td><td><span class="tag danger">Text only</span> Needs drawing.</td></tr>
+    <tr><td>8</td><td>Order processing flowchart</td><td><span class="tag danger">Text only</span> Not claimed. Contains billing material that should be removed.</td></tr>
+    <tr><td>9</td><td>Timing diagram</td><td><span class="tag danger">Text only</span> Numerals 940 to 960 are referenced in claims.</td></tr>
+    <tr><td>10</td><td>Performance graph</td><td><span class="tag danger">Unsupported</span> Illustrative only. Delete unless measured data exists.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>5. Key Risks</h2>
+
+<h3>Patentability</h3>
+<ul>
+  <li>No prior-art search has been done. Industrial firewalls, safety interlocks, HSM and SmartNIC designs, and append-only memory architectures are all relevant. Any of them could anticipate or render obvious parts of the claims.</li>
+  <li>Claim 2 is broad and recites functional results. It is the most vulnerable to rejection.</li>
+</ul>
+
+<h3>Eligibility and enablement</h3>
+<ul>
+  <li>Some claims recite results ("physically blocks," "prevents," "concurrent") where structure is needed.</li>
+  <li>"Mechanical or solid-state contacts" is an alternative that must be enabled for each option or narrowed to one.</li>
+  <li>The hash-chain limitation in claim 1 is supported only by text, not by a figure.</li>
+  <li>"Physically isolated" needs a definition so it cannot be read to cover logical separation.</li>
+  <li>Business material (revenue pooling, bond retirement, billing, toll rates) is not claimed but appears in the source documents and some earlier descriptions. It adds §101 exposure and should be removed from the specification.</li>
+</ul>
+
+<h3>Evidence and accuracy</h3>
+<ul>
+  <li>The source HTML contains large numerical claims (factory counts, hardware costs, chip volumes, a 25-year deployment plan) without engineering support. Any of these in a filing would be unsupported.</li>
+  <li>FIG. 10 remains in the draft. The "illustrative" label does not cure a performance graph that is not based on data.</li>
+  <li>Performance adjectives ("minimizing," "reducing," "enabling concurrent") still describe benefits rather than structure.</li>
+</ul>
+
+<h3>Disclosure and confidentiality</h3>
+<ul>
+  <li>The source HTML files may have been publicly accessible. If so, public disclosure may affect novelty in some jurisdictions, and grace periods vary by country.</li>
+  <li>Confidentiality of drawings and source files has not been formally addressed.</li>
+</ul>
+
+<h3>Ownership and inventorship</h3>
+<ul>
+  <li>Inventor identities, employment or contractor agreements, and ownership of the underlying technology have not been confirmed.</li>
+</ul>
+
+<h2>6. Corrections to Earlier Work</h2>
+<ul>
+  <li>Earlier descriptions of the documents as "fully harmonized" or "legally defensive" were not accurate. No legal review has occurred.</li>
+  <li>An earlier statement that the detailed description satisfies 35 U.S.C. 112(a) was premature. Enablement depends on engineering detail that has not been provided.</li>
+  <li>Abstract word counts given in earlier drafts were approximate and inconsistent. Count the final abstract with a word tool.</li>
+  <li>The "finalized" text and its readiness report contain claims ("exactly 142 words," "statutory compliance") that could not be verified. They should not be relied on.</li>
+  <li>A caption cannot make a performance figure evidentiary. The FIG. 10 safe-harbor language does not remove the figure.</li>
+</ul>
+
+<h2>7. Prioritized Next Steps</h2>
+<ol>
+  <li><strong>Stop distributing the source HTML files</strong> and determine whether they were publicly posted. Record when and where.</li>
+  <li><strong>Engage a registered patent attorney</strong> and consider a provisional application to secure a priority date, given the disclosure question.</li>
+  <li><strong>Order a prior-art search</strong> covering the areas listed in section 5.</li>
+  <li><strong>Delete FIG. 10</strong> unless measured data exists, and remove all performance adjectives.</li>
+  <li><strong>Remove business material</strong> (revenue pooling, billing, bond retirement, toll rates, unsupported factory and cost figures) from the specification.</li>
+  <li><strong>Supply engineering evidence:</strong> circuit schematics for the isolation switch, detector, and write path; the hash-chain structure; timing data for FIG. 9; and any test records.</li>
+  <li><strong>Finalize the claims</strong> after the search, narrowing claim 2 if needed and either choosing one contact technology or describing both.</li>
+  <li><strong>Complete the figures:</strong> add the missing labels, a hash-chain figure, and drawings for FIGS. 7 and 9.</li>
+  <li><strong>Confirm inventorship and ownership</strong> and document confidentiality measures.</li>
+  <li><strong>Set budget and filing strategy</strong> (US first, PCT, or India) with the attorney.</li>
+</ol>
+
+<h2>8. Bottom Line</h2>
+<p>The technical concept is coherent and has a plausible path to protection in narrower forms, particularly claim 1 with its physical separation and hardwired one-way write path. Broader claims, especially claim 2, face significant prior-art risk. Business material and unsupported numbers in the source documents should be kept out of any filing.</p>
+<p>The draft is not ready to file, and its patentability cannot be assessed without a search and attorney review. This summary is not a legal opinion.</p>
+
+<footer>Prepared for internal review. Not a legal opinion. Patentability has not been determined.</footer>
+
+</div>
+</body>
+</html>
